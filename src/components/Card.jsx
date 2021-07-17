@@ -22,9 +22,9 @@ const Card = ({image}) => {
           </ul>
         </div>
         <div className="px-6 py-4">
-        {tags.map(tag=>(
+        {tags.map((tag,index)=>(
         <span className="inline-block bg-purple-200 rounded-full text-sm 
-        font-semibold text-gray-700 mr-2 px-3 py-1" key={image.id}>
+        font-semibold text-gray-700 mr-2 px-3 py-1" key={index}>
         #{tag}
         </span>
         ))}
