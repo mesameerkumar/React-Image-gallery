@@ -13,11 +13,15 @@ function App() {
       setisloading(false);
     })
     .catch(err=> console.log(err));
-  },[]);
+  },[term]);
 
   return (
     <div className="container mx-auto" >
-    <Search />
+    <Search  
+      searchText={(text)=> setterm(text)}
+    />
+
+    {!isloading && images.length===0 && <h1 className="mx-auto text-center text-5xl mt-31">No images Found</h1>}
     {isloading?<h1 className="mx-auto text-center text-5xl mt-31">Loading...</h1> : <div className="grid grid-cols-3 gap-3">
        {images.map(image=>(
         <Card

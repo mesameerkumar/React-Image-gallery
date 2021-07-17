@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 
 const Card = ({image}) => {
+  
     const tags=image.tags.split(",");
     return(
         <div className="max-w-sm rounded overflow-hidden shadow-2xl ">
